@@ -6,8 +6,9 @@
   "main": "index.js",
   "scripts": {
     "start": "probot run ./index.js",
-    "test": "tap --100 --coverage test/**/*-test.js",
+    "test": "tap test/**/*-test.js",
     "posttest": "npm run lint",
+    "coverage-report": "npx tap report --coverage-report lcov",
     "lint": "prettier --check '{lib,test}/**/*.{js,json,ts}' index.js *.md package.json",
     "lint:fix": "prettier --write '{lib,test}/**/*.{js,json,ts}' index.js *.md package.json"
   },
@@ -18,20 +19,20 @@
   "author": "Gregor Martynus (https://github.com/gr2m)",
   "license": "Apache-2.0",
   "dependencies": {
-    "gemoji": "^8.0.0",
+    "gemoji": "^8.1.0",
     "pluralize": "^8.0.0",
-    "probot": "^12.2.9"
+    "probot": "^12.3.3"
   },
   "devDependencies": {
-    "@sinonjs/fake-timers": "^10.0.2",
-    "@vercel/node": "^2.8.11",
+    "@sinonjs/fake-timers": "^13.0.5",
+    "@vercel/node": "^3.2.25",
     "lodash.clonedeep": "^4.5.0",
-    "nock": "^13.3.0",
-    "prettier": "^2.8.1",
+    "nock": "^13.5.6",
+    "prettier": "^3.3.3",
     "proxyquire": "^2.0.1",
     "simple-mock": "^0.8.0",
-    "smee-client": "^1.2.3",
-    "tap": "^16.3.2"
+    "smee-client": "^2.0.4",
+    "tap": "^21.0.1"
   },
   "jest": {
     "testURL": "http://localhost/"
